@@ -7,14 +7,14 @@ def read_template(path) :
    return content  
 
 def parse_template(contents) :
-    parsed_contents = "" # parsed output string
+    parsed_contents = "" 
     parsed_words = []
-    in_brackets = False # flag for brackets
+    in_brackets = False 
     temp_word_string = ""
 
     num_brackets = contents.count('{') + contents.count('}')
     if (num_brackets > 0 and num_brackets % 2 == 0):
-        # Template file is valid, continue
+       
             for char in contents:
                 if char == '{':
                     parsed_contents += char
