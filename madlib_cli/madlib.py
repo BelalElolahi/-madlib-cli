@@ -43,12 +43,11 @@ def write_file_contents(path, content):
 def wellcom_message():
     print ( """
 **************************************
-**    Welcome to the MadLib CLI!   **
-**    Follow directions below.     **
+**    Welcome to the MadLib cli!   **
+**               ^_^               **
 **************************************
 """)  
-
-    print("follow the instrcutions")
+    print("follow the instrcutions\n")
 
 def  get_response (words) :
     responses =[]
@@ -60,25 +59,24 @@ def  get_response (words) :
 
 def creat_madlib():
     
-    file_string = read_template("assets/dark_and_stormy_night_template.txt")
-    parsed_string, contents = parse_template(file_string)
+    file = read_template("assets/dark_and_stormy_night_template.txt")
+    parsed_string, contents = parse_template(file)
 
-    # Show user interface
+    
     wellcom_message()
 
     user_words = []
 
-    # Parse user input
+
     user_words = get_response(contents)
-    # Create completed Madlib string
+
     completed_madlib = merge(parsed_string, user_words)
 
-    # Print results to user before writing to file
     print("Thanks!  See your completed Madlib :\n")
     print(completed_madlib + "\n")
 
-    # Write to output file
     write_file_contents("assets/missing.txt", completed_madlib.encode())
+
 
 if __name__ == "__main__":
     creat_madlib()
