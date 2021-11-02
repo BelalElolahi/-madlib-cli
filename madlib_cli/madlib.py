@@ -33,12 +33,15 @@ def parse_template(contents) :
     
     return (parsed_contents, tuple(parsed_words))
 
+
 def merge(parsed_contents, responses):
     return parsed_contents.format(*responses)
+
 
 def write_file_contents(path, content):
     with open(path, 'wb') as f:
         f.write(content)
+
 
 def wellcom_message():
     print ( """
