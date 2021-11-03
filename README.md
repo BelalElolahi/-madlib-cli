@@ -1,7 +1,7 @@
 ## Lab 03: MadLib
 
 ### Links and Resources
-* [PR](https://github.com/BelalElolahi/-madlib-cli/pull/4)
+* [PR]( https://github.com/BelalElolahi/-madlib-cli/pull/5)
 
 ## Task 
  Create a file called madlib.py at root of madlib_cli folder, which will contain all of the Python code that you will write relating to your Madlib game.
